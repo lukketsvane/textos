@@ -21,7 +21,7 @@ const Lists = ({ username, totalUnreadNotifications }: Props) => {
     const openTweetModal = useTweetModal((state) => state.onOpen);
 
     return (
-        <ul className="flex flex-col space-y-3">
+        <ul className="flex flex-col space-y-3 ">
             {links.map((link) => {
                 if (!link.href) link.href = `/${username}`;
                 
@@ -29,13 +29,13 @@ const Lists = ({ username, totalUnreadNotifications }: Props) => {
                 const isSamePath = !isLogo && link.href === pathname;
 
                 // Set the size: larger for the logo, smaller for other icons
-                const size = isLogo ? 36 : 24;  // Logo larger at 36x36, others smaller at 24x24
+                const size = isLogo ? 60 : 22;  // Logo larger at 36x36, others smaller at 24x24
 
                 return (
                     <li
                         key={link.title}
                         className={cn(
-                            "w-fit rounded-full pl-2 overflow-hidden",
+                            "w-fit rounded-full  overflow-hidden",
                             isSamePath && "font-extrabold",
                         )}
                     >
@@ -48,10 +48,11 @@ const Lists = ({ username, totalUnreadNotifications }: Props) => {
                             }}
                             className={cn(
                                 "flex flex-row items-center space-x-5 tracking-wider text-xl max-xl:p-3 hover:bg-black-200 transition",
-                                isLogo ? "xl:p-4" : "xl:py-3.5 xl:px-4",
+                                isLogo ? "xl:p-4" : "xl:py-3.5 xl:px-2",
                             )}
                         >
-                            <div className="relative">
+                            <div className={`relative ${!isLogo && 'pl-3'}`}
+                            >
                                 <Image
                                     src={isSamePath ? link.activeIcon : link.icon}
                                     alt={link.title}
@@ -67,7 +68,7 @@ const Lists = ({ username, totalUnreadNotifications }: Props) => {
                                 )}
                             </div>
                             {!isLogo && (
-                                <span className="max-xl:hidden r-10 xl:inline">{link.title}</span>
+                                <span className="max-xl:hidden  xl:inline">{link.title}</span>
                             )}
                         </Link>
                     </li>
@@ -82,7 +83,6 @@ const Lists = ({ username, totalUnreadNotifications }: Props) => {
                     >
                         <span className="max-xl:hidden xl:inline">Post</span>
                         <span className="max-xl:inline  xl:hidden ">
-                            <Plus size={30} />
                         </span>
                     </Button>
                 </div>
