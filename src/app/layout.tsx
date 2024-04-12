@@ -6,19 +6,20 @@ import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
 	title: {
-		default: "X",
-		template: "	 / X",
+		default: "X^2",
+		template: "%s / X^2",
 	},
 	metadataBase: new URL(process.env.NEXT_PUBLIC_NEXT_URL!),
 	themeColor: "black",
 	openGraph: {
 		title: {
-			default: "X",
-			template: " / X",
+			default: "X^2",
+			template: "%s / X^2",
 		},
-		siteName: "X squared",
+		siteName: "X^2 (Twitter Squared)",
 	},
 };
+
 
 export default function RootLayout({
 	children,
