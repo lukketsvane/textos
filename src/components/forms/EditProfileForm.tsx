@@ -256,13 +256,13 @@ const EditProfileForm = ({ user, isModal, setIsOpen }: Props) => {
 						render={({ field }) => (
 							<FormItem>
 								<div className="relative max-sm:w-[90px] max-sm:h-[90px] sm:h-[112px] sm:w-[112px] rounded-full overflow-hidden">
-									<Image
-										src={previewImageUrl || user.imageUrl}
-										alt={user.username}
-										width={112}
-										height={112}
-										className="object-cover max-sm:w-[90px] max-sm:h-[90px] sm:h-[112px] sm:w-[112px] rounded-full select-none border-4 border-black bg-gray-200"
-									/>
+								<Image
+									src={previewImageUrl || user.imageUrl}
+									alt={user.username}
+									width={112}
+									height={112}
+									className="object-cover max-sm:w-[90px] max-sm:h-[90px] sm:h-[112px] sm:w-[112px] rounded-full select-none border-4 border-black bg-gray-200 filter grayscale"
+								/>
 									<Label
 										htmlFor="image-url"
 										className="absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] p-3 rounded-full bg-gray-300/80 hover:bg-gray-300/50 transition text-white cursor-pointer"
