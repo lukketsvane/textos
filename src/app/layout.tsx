@@ -7,16 +7,16 @@ import { Toaster } from "react-hot-toast";
 export const metadata: Metadata = {
 	title: {
 		default: "X",
-		template: "%s / X",
+		template: "	 / X",
 	},
 	metadataBase: new URL(process.env.NEXT_PUBLIC_NEXT_URL!),
 	themeColor: "black",
 	openGraph: {
 		title: {
 			default: "X",
-			template: "%s / X",
+			template: " / X",
 		},
-		siteName: "X ( Squared)",
+		siteName: "X squared",
 	},
 };
 
