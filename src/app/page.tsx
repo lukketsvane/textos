@@ -66,10 +66,10 @@ export default async function Home() {
 				<div className="flex flex-col space-y-4 sm:space-y-8">
 					<div className="flex flex-col space-y-8 sm:space-y-16">
 						<h1 className="text-4xl sm:text-6xl font-extrabold">
-							Happening now
+							Speech Through Proxy
 						</h1>
 						<h3 className="text-xl sm:text-3xl font-bold tracking-wider">
-							Join today.
+							P2P Agency of Expression 
 						</h3>
 					</div>
 					<CreateAnAccount />
